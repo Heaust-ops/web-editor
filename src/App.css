@@ -1,0 +1,30 @@
+.main-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: calc(100vh - 3rem);
+  background-color: #272822;
+}
+
+.iconsWrapper {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 3rem;
+  display: flex;
+  vertical-align: center;
+  justify-content: space-around;
+  background-color: #2F3129;
+}
+
+.iconsWrapper > * {
+  font-size: 2rem;
+  transition: 0.2s;
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}

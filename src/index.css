@@ -1,0 +1,29 @@
+:root {
+  --device: "mobile";
+}
+
+@media only screen and (min-width: 800px) {
+  :root {
+    --device: "desktop";
+  }
+}
+
+/** Scrollbar*/
+
+/* width */
+::-webkit-scrollbar {
+  height: 3px;
+  width: 0px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  display: none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(92, 189, 195);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
