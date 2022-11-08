@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import HorizontalSlider from "./components/HorizontalSlider/HorizontalSlider";
@@ -9,6 +9,10 @@ import { IconButton } from "@mui/material";
 function App() {
   const [scrollTo, setScrollTo] = useState(0);
   const isMobileKeyboardOpen = useDetectKeyboardOpen(false);
+
+  useEffect(() => {
+    if (scrollTo > -1) setScrollTo(-1)
+  }, [scrollTo])
 
   return (
     <div
