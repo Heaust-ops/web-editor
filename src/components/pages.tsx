@@ -10,6 +10,26 @@ import "ace-builds/src-noconflict/mode-css";
 import "ace-builds/src-noconflict/mode-javascript";
 import DynamicFrame from "./DynamicFrame/DynamicFrame";
 
+const editorProps = {
+  theme: "monokai",
+  fontSize: 18,
+  height: "100%",
+  showGutter: false,
+  width: "100%",
+  useWrapMode: true,
+  wrapEnabled: true,
+  showPrintMargin: false,
+  highlightActiveLine: false,
+  setOptions: {
+    enableBasicAutocompletion: false,
+    enableLiveAutocompletion: false,
+    enableSnippets: false,
+    showLineNumbers: false,
+    tabSize: 2,
+    indentedSoftWrap: false,
+  },
+};
+
 export const getPagesNavigation = () => {
   const [html, sethtml] = useState("<h1>HTML : )</h1>");
   const [css, setcss] = useState(`body {
@@ -23,15 +43,11 @@ export const getPagesNavigation = () => {
       icon: faCode,
       element: (
         <AceEditor
+          {...editorProps}
           mode="html"
-          theme="monokai"
           value={html}
           onChange={sethtml}
           name="htmleditor"
-          fontSize={18}
-          height="100%"
-          width="100%"
-          editorProps={{ $blockScrolling: true }}
         />
       ),
     },
@@ -41,14 +57,10 @@ export const getPagesNavigation = () => {
       element: (
         <AceEditor
           mode="css"
-          theme="monokai"
           value={css}
           onChange={setcss}
           name="csseditor"
-          fontSize={18}
-          height="100%"
-          width="100%"
-          editorProps={{ $blockScrolling: true }}
+          {...editorProps}
         />
       ),
     },
@@ -58,14 +70,10 @@ export const getPagesNavigation = () => {
       element: (
         <AceEditor
           mode="javascript"
-          theme="monokai"
           value={js}
           onChange={setjs}
           name="jseditor"
-          fontSize={18}
-          height="100%"
-          width="100%"
-          editorProps={{ $blockScrolling: true }}
+          {...editorProps}
         />
       ),
     },
