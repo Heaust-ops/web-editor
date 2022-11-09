@@ -28,7 +28,7 @@ export const getPagesNavigation = () => {
           value={html}
           onChange={sethtml}
           name="htmleditor"
-          fontSize={22}
+          fontSize={18}
           height="100%"
           width="100%"
           editorProps={{ $blockScrolling: true }}
@@ -45,7 +45,7 @@ export const getPagesNavigation = () => {
           value={css}
           onChange={setcss}
           name="csseditor"
-          fontSize={22}
+          fontSize={18}
           height="100%"
           width="100%"
           editorProps={{ $blockScrolling: true }}
@@ -62,7 +62,7 @@ export const getPagesNavigation = () => {
           value={js}
           onChange={setjs}
           name="jseditor"
-          fontSize={22}
+          fontSize={18}
           height="100%"
           width="100%"
           editorProps={{ $blockScrolling: true }}
