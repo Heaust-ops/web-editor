@@ -6,7 +6,6 @@ interface HorizontalSliderProps {
   style?: CSSProperties;
   sectionStyle?: CSSProperties;
   className?: string;
-  urlStates?: string[];
   sectionClass?: string;
   scrollTo: number;
 }
@@ -18,7 +17,6 @@ const HorizontalSlider: FC<HorizontalSliderProps> = ({
   sectionClass,
   sectionStyle,
   scrollTo,
-  urlStates,
 }) => {
   const sectionRefs = useRef([] as HTMLElement[]);
 
@@ -29,13 +27,6 @@ const HorizontalSlider: FC<HorizontalSliderProps> = ({
         block: "center",
         inline: "center",
       });
-
-      if (urlStates)
-        history.replaceState(
-          { page: urlStates[scrollTo] },
-          "section",
-          urlStates[scrollTo]
-        );
     }
   }, [scrollTo]);
 
